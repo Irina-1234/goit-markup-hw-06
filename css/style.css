@@ -571,7 +571,10 @@ footer {
     align-items: center;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
-
+}
+.icon-rss {
+    position: absolute;
+    right: 200px;
 }
 
 /* ---------------------Modal------------------------- */
@@ -632,8 +635,10 @@ footer {
     padding-left: 12px;
     cursor: pointer;
     outline: none;
+    padding-left: 42px;
 }
-.form-input:focus {
+.form-input:focus,
+.form-text:focus {
     border-color: var(--accent-color);
 }
 .input-text {
@@ -656,6 +661,7 @@ footer {
     padding: 12px;
     resize: none;
     cursor: pointer;
+    outline: none;
 }
 .form-text::placeholder {
     font-weight: 400;
@@ -677,7 +683,7 @@ footer {
     fill: var(--accent-color);
 }
 .button-submit {
-    width: 200px;
+    min-width: 200px;
     height: 50px;
     background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -711,21 +717,40 @@ footer {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+
 }
 .checkbox-text {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--lilte-text-color);
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .checkmark {
-    height: 16px;
-    width: 16px;
-    margin-right: 8px;
-    border: 3px solid #212121;
+    appearance: none;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
 }
+.icon-galka {
+    position: absolute;
+    left: 2px;
 
-.checkbox-list input:checked {
-    background-color: var(--accent-color);   
+}
+.chek {
+    width: 15px;
+    height: 15px;
+    display: block;
+    border: 2px solid #000000;
+    border-radius: 2px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+.checkmark:checked + .chek{
+    background-color: var(--accent-color);  
+    background-image: url(../images/icon.svg#icon-galka); 
+    border: none;
 }
